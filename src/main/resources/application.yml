@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:midas;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+fraud:
+  high-amount-threshold: 1000.0
+  rapid-txn-window-minutes: 5.0
+  rapid-txn-count-threshold: 3
+  risk-score-threshold: 0.7
